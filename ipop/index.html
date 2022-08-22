@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이팝 엔지니어링</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./images/favicon.png">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      $('.inner').hide();
+      $('nav li').hover(function(){
+        $('.inner',this).stop().fadeIn(500);
+      },function(){
+        $('.inner',this).stop().fadeOut(500);
+      });
+
+/*스크롤 했을 때*/
+var TOP=$(window).scrollTop();
+    $(window).scroll(function(){
+        TOP=$(window).scrollTop();
+        //console.log(TOP);
+        if(TOP==0){ //조건이 참, 즉 TOP의 값이 0일때
+            $('header').removeClass('bg');
+        } else {
+            $('header').addClass('bg');
+        }
+        
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type="radio" name="menu" id="toggle1" class="none">
+	<input type="radio" name="menu" id="toggle2" class="none">
+  <header>
+    <div class="header_wrap">
+    <h1 class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="로고">
+      </a>
+    </h1>
+    <nav>
+      <ul class="outer clear">
+        <li>
+          <a href="#">ABOUT</a>
+          <ul class="inner">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">CEO인사말</a></li>
+            <li><a href="#">조직도</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">SERVICE</a>
+          <ul class="inner">
+            <li><a href="sub.html">건축설계</a></li>
+            <li><a href="#">도시설계</a></li>
+            <li><a href="#">건설사업관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">PROJECTS </a>
+          <ul class="inner">
+            <li><a href="#">연도별</a></li>
+            <li><a href="#">용도별</a></li>
+            <li><a href="#">지역별</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">CONTACT</a>
+          <ul class="inner">
+            <li><a href="#">오시는 길</a></li>
+            <li><a href="#">질문</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">RECRUIT</a>
+          <ul class="inner">
+            <li><a href="#">인재상</a></li>
+            <li><a href="#">채용 공고</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <label for="toggle1" class="menu toggle_btn">
+      <!-- menu -->
+    </label>
+  </div>
+  </header>
+  <main>
+    <section class="slide">
+      <img src="images/slide.jpg" alt="슬라이드 ">
+      <div class="tit">
+        <div class="s_txt">
+          <p>
+            <span class="blue_txt">자연</span>과 <span class="blue_txt1">인간</span>이 하나되는 쾌적하고 <span class="red_txt">아름다운 공간</span>
+          </p>
+          <p>
+            <span class="white_txt">하늘채스카이앤</span>
+          <span class="eng_txt">Hanulche-Skyand</span>
+          </p>
+        </div>
+      </div>
+      <p class="bt_txt">EYEPOP ENGINEERING</p>
+    </section>
+    <section class="sec1">
+    <div class="sec1_inner">
+      <div class="tit">
+        <h6>PROJECTS</h6>
+        <div class="view_more">
+          <a href="#">
+          <span>VIEW MORE</span>
+          </a>
+        </div>
+      </div>
+      <div class="projects">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="ser_img">
+                <img src="images/junggu.jpg" alt="">
+              </div>
+              <div class="ser_text">
+                <strong>국민체육센터 경기장</strong>
+                <span>운동시설</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ser_img">
+                <img src="images/img2-1.jpg" alt="">
+              </div>
+              <div class="ser_text">
+                <strong>유성GC 아울렛</strong>
+                <span>문화시설</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ser_img">
+                <img src="images/img3-1.jpg" alt="">
+              </div>
+              <div class="ser_text">
+                <strong>대전 중부 새마을금고</strong>
+                <span>업무시설</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </section>
+    <section class="sec2">
+      <div class="sec2_inner">
+        <div class="tit">
+          <h2>OVERVIEW</h2>
+          <p class="over_txt">고객을 최우선으로 생각하여 인간과 자연이 하나 되는 쾌적하고 아름다운 공간 창조를
+            이루고자 노력하고 있습니다. 삶의 질과 미래의 지속 가능성을 추구하는 건축물을 만들고자 최선을 다하고 있으며, 사용자에게 정신적인 안식까지
+            줄 수 있도록 배려와 혼을 담아 명품을 만들어 나가는데 최선의 노력을 다하겠습니다.</p>
+        </div>
+      </div>
+      <div class="sec2_img">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="img">
+                <div class="text">
+                <strong class="over_name">residential</strong>
+                <span class="over_tit">주거, 주거복합, 도시</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="img">
+                <div class="text">
+                <strong class="over_name">public</strong>
+                <span class="over_tit">공공, 문화, 업무</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="img">
+                <div class="text">
+                <strong class="over_name">mixed</strong>
+                <span class="over_tit">복합, 상업, 교육, 의료, 체육, 특수</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="sec3">
+      <div class="sec3_inner">
+        <div class="tit">
+          <h2>service</h2>
+        </div>
+      <div class="ser">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="ser_txt">
+                <div class="line">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </div>
+                <strong class="ser_ko">도시설계, 조경</strong>
+                <span class="ser_eng">urban planning design, landscape</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ser_txt">
+                <div class="line">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </div>
+                <strong class="ser_ko">개발사업, 제안공모</strong>
+                <span class="ser_eng">development work, desing & project proposal</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ser_txt">
+                <div class="line">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+                <strong class="ser_ko">건축설계</strong>
+                <span class="ser_eng">architectural design</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ser_txt">
+                <div class="line">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </div>
+                <strong class="ser_ko">CM, 감리</strong>
+                <span class="ser_eng">construction management supervision</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+  <div class="ft">
+    <div class="left">
+      <a href="index.html">
+        <img src="images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="center">
+      <p>대전광역시 서구 월드컵대로484번안길 10, 3층(월평동)<br>
+      TEL. 042-489-0430
+      </p>
+      <span>Copyright © 2022 Eyepop Engineering & Architects Co.LTD. ALL rights reserved.</span>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="tel:042-489-0430"><img src="images/phone3.png" alt=""><span>042-489-0430</span></a></li>
+        <li><a href="#"><img src="images/mail3.png" alt=""><span>ipop@gamil.com</span></a></li>
+        <li><a href="#"><img src="images/location3.png" alt=""><span>Open Google Map</span></a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+  <div id="gnbMo">
+    <label for="toggle2" class="gnbLABEL">close</label>
+    <div class="toggleMenu">
+      <ul class="gnbNAV">
+        <li>
+          <div class="gnaTiT">
+            <label for="menu1">ABOUT</label>
+          </div>
+          <input type="radio" name="menuSub" id="menu1" >
+          <ul class="toSub">
+            <li><a href="index.html">회사소개</a></li>
+            <li><a href="index.html">CEO 인사말</a></li>
+            <li><a href="index.html">조직도</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="gnaTiT_2">
+            <label for="menu2">SERVICE</label>
+          </div>
+          <input type="radio" name="menuSub" id="menu2" >
+          <ul class="toSub_2">
+            <li><a href="sub.html">건축설계</a></li>
+            <li><a href="index.html">도시설계</a></li>
+            <li><a href="index.html">건설사업관리</a></li>
+          </ul>
+        </li>
+        <li><div class="gnaTiT"><label for="menu3">PROJECTS</label></div>
+          <input type="radio" name="menuSub" id="menu3" >
+          <ul class="toSub">
+            <li><a href="index.html">연도별</a></li>
+            <li><a href="index.html">용도별</a></li>
+            <li><a href="index.html">지역별</a></li>
+          </ul>
+        </li>
+        <li><div class="gnaTiT"><label for="menu4">CONTACT</label></div>
+          <input type="radio" name="menuSub" id="menu4" >
+          <ul class="toSub">
+            <li><a href="index.html">오시는 길</a></li>
+            <li><a href="index.html">질문</a></li>
+          </ul>
+        </li>
+        <li><div class="gnaTiT"><label for="menu5">RECRUIT</label></div>
+          <input type="radio" name="menuSub" id="menu5" >
+          <ul class="toSub">
+            <li><a href="index.html">인재상</a></li>
+            <li><a href="index.html">채용 공고</a></li>
+          </ul>
+        </li>
+      </ul> <!-- gnbNAV -->
+      <ul class="log">
+        <li class="login"><a href="#">로그인</a></li>
+        <li class="join"><a href="#">회원가입</a></li>
+      </ul>
+    </div> <!-- toggleMenu -->
+  </div> <!-- gnbMo -->
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이팝 엔지니어링</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/sub_style.css">
+  <link rel="shortcut icon" href="./images/favicon.png">
+  <script src="js/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.inner').hide();
+      $('nav li').hover(function(){
+        $('.inner',this).stop().fadeIn(500);
+      },function(){
+        $('.inner',this).stop().fadeOut(500);
+      });
+    
+      /*스크롤 했을 때*/
+var TOP=$(window).scrollTop();
+    $(window).scroll(function(){
+        TOP=$(window).scrollTop();
+        //console.log(TOP);
+        if(TOP==0){ //조건이 참, 즉 TOP의 값이 0일때
+            $('header').removeClass('bg');
+        } else {
+            $('header').addClass('bg');
+        }
+        
+      });
+
+    var TOP=$(window).scrollTop();
+    $(window).scroll(function(){
+        TOP=$(window).scrollTop();
+        if(TOP==0){
+        var serTitleOffset=$('.sec3_inner').offset().top;
+        serTitleOffset=Number(serTitleOffset)-300;}
+    if(TOP>serTitleOffset){
+            $('.sec3_inner').addClass('on');
+        }
+      });
+      });
+  </script>
+</head>
+<body> 
+  <input type="radio" name="menu" id="toggle1" class="none">
+	<input type="radio" name="menu" id="toggle2" class="none">
+  <header>
+    <div class="header_wrap">
+    <h1 class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="로고">
+      </a>
+    </h1>
+    <nav>
+      <ul class="outer clear">
+        <li>
+          <a href="#">ABOUT</a>
+          <ul class="inner">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">CEO인사말</a></li>
+            <li><a href="#">조직도</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">SERVICE</a>
+          <ul class="inner">
+            <li><a href="sub.html">건축설계</a></li>
+            <li><a href="#">도시설계</a></li>
+            <li><a href="#">건설사업관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">PROJECTS </a>
+          <ul class="inner">
+            <li><a href="#">연도별</a></li>
+            <li><a href="#">용도별</a></li>
+            <li><a href="#">지역별</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">CONTACT</a>
+          <ul class="inner">
+            <li><a href="#">오시는 길</a></li>
+            <li><a href="#">질문</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">RECRUIT</a>
+          <ul class="inner">
+            <li><a href="#">인재상</a></li>
+            <li><a href="#">채용 공고</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <label for="toggle1" class="menu toggle_btn">
+      <!-- menu -->
+    </label>
+  </div>
+  </header>
+  <div class="sub_bg">
+    <div class="sub_tit">
+      <h2>SERVICE</h2>
+    </div>
+  </div>
+  <main>
+    <div class="sec1">
+      <div class="sec1_inner">
+        <div class="pic">
+              <img src="images/hurium.jpg" alt="">
+
+          <div class="l_txt">
+            <span>해링턴 플레이스 휴리움</span>
+          </div>
+          <div class="r_txt">
+            <span>APARTMENT</span>
+            <span>133,134.41㎡</span>
+            <span>지하3층, 지상25층</span>
+          </div>
+        </div>
+        <div class="txt">
+          <strong>SMART HOME SYSTEM<br></strong>
+          <span>스마트 IoT 시스템</span>
+        </div>
+      </div>
+    </div>
+    <div class="sec2">
+      <div class="sec2_inner">
+        <ul>
+          <li class="icon_1"><img src="images/heat2.png" alt=""><span>냉·난방 제어</span></li>
+          <li class="icon_2"><img src="images/lamp2.png" alt=""><span>조명 제어</span></li>
+          <li class="icon_3"><img src="images/energy2.png" alt=""><span>에너지 관리</span></li>
+          <li class="icon_4"><img src="images/parking2.png" alt=""><span> 주차 관제</span></li>
+          <li class="icon_5"><img src="images/washing2_icon.png" alt=""><span>가전 제어</span></li>
+          <li class="icon_6"><img src="images/ventilation2.png" alt=""><span>세대 환기 제어</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sec3">
+      <div class="sec3_inner">
+        <div class="l_side">
+          <img src="images/smarthome.jpg" alt="">
+        </div>
+        <div class="r_side">
+          <div class="t_tit">
+            <div class="tl_side">
+              <strong>디지털 시스템</strong>
+            </div>
+            <div class="tr_side">
+              <span>일상의 편리함<br></span>
+              <i>DIGITAL SYSTEM</i>
+            </div>
+          </div>
+          <div class="f_tit">
+            <div class="fl_side">
+              <span>엘레베이터 호출</span>
+              <span>터치스크린 월패드</span>
+              <span>지하주차장 엘리베이터 연결<br>
+              <strong>(일부동 제외)</strong>
+              </span>
+              <span>주차유도 시스템</span>
+              <span>주차 위치 확인 시스템</span>
+            </div>
+            <div class="fr_side">
+              <span>커튼제어(거실) <strong>유상옵션</strong></span>
+              <span>원패스 시스템</span>
+              <span>조명 제어</span>
+              <span>예약 제어</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec4">
+      <div class="sec4_inner">
+        <div class="l_side">
+          <div class="t_tit">
+            <div class="tl_side">
+              <span>효율적 에너지<br></span>
+              <i>ENERGY SYSTEM</i>
+            </div>
+            <div class="tr_side">
+              <strong>에너지 시스템</strong>
+            </div>
+          </div>
+          <div class="f_tit">
+            <div class="fl_side">
+              <span>관리비조회 및 에너지 사용량 조회</span>
+              <span>APP을 통한 IoT가전기기 제어</span>
+              <span>냉·난방 제어</span>
+            </div>
+            <div class="fr_side">
+              <span>대기전력 차단 시스템</span>
+              <span>일괄 소등 및 가스 차단</span>
+              <span>전기자동차 충전설비 시스템</span>
+            </div>
+          </div>
+        </div>
+        <div class="r_side">
+          <img src="images/light.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="sec5">
+      <div class="sec5_inner">
+        <div class="l_side">
+          <img src="images/cctv.jpg" alt="">
+        </div>
+        <div class="r_side">
+          <div class="t_tit">
+            <div class="tl_side">
+              <strong>안전 시스템</strong>
+            </div>
+            <div class="tr_side">
+              <span>생활 속 안심<br></span>
+              <i>SECURITY SYSTEM</i>
+            </div>
+          </div>
+          <div class="f_tit">
+            <div class="fl_side">
+              <span>현관보기</span>
+              <span>대피안전 시스템</span>
+              <span>CCTV</span>
+              <span>방문차량 예약</span>
+              <span>자녀안심 시스템</span>
+            </div>
+            <div class="fr_side">
+              <span>공동현관 문열림</span>
+              <span>차량번호인식 주차관제</span>
+              <span>무인택배 시스템</span>
+              <span>방문자 조회</span>
+              <span>방범 설정</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec6">
+      <div class="sec6_inner">
+        <div class="l_side">
+          <div class="t_tit">
+            <div class="tl_side">
+              <span>친환경 에코 라이프<br></span>
+              <i>WELLBEING SYSTEM</i>
+            </div>
+            <div class="tr_side">
+              <strong>웰빙 시스템</strong>
+            </div>
+          </div>
+          <div class="f_tit">
+            <div class="fl_side">
+              <span>미세먼지 신호등</span>
+              <span>다기능 복합 환기시스템</span>
+              <span>실외 공기질알림</span>
+            </div>
+            <div class="fr_side">
+              <span>살균조명(세대공통) <storng>유상옵션</strong></span>
+              <span>감성조명 <strong>유상옵션</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="r_side">
+          <img src="images/environmental.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+  <div class="ft">
+    <div class="left">
+      <a href="#">
+        <img src="images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="center">
+      <p>대전광역시 서구 월드컵대로484번안길 10, 3층(월평동)<br>
+      TEL. 042-489-0430
+      </p>
+      <span>Copyright © 2022 Eyepop Engineering & Architects Co.LTD. ALL rights reserved.</span>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="tel:042-489-0430"><img src="images/phone3.png" alt=""><span>042-489-0430</span></a></li>
+        <li><a href="#"><img src="images/mail3.png" alt=""><span>ipop@gamil.com</span></a></li>
+        <li><a href="#"><img src="images/location3.png" alt=""><span>Open Google Map</span></a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+  <div id="gnbMo">
+    <label for="toggle2" class="gnbLABEL">close</label>
+    <div class="toggleMenu">
+      <ul class="gnbNAV">
+        <li>
+          <div class="gnaTiT">
+            <label for="menu1">ABOUT</label>
+          </div>
+          <input type="radio" name="menuSub" id="menu1" >
+          <ul class="toSub">
+            <li><a href="index.html">회사소개</a></li>
+            <li><a href="index.html">CEO 인사말</a></li>
+            <li><a href="index.html">조직도</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="gnaTiT">
+            <label for="menu2">SERVICE</label>
+          </div>
+          <input type="radio" name="menuSub" id="menu2" >
+          <ul class="toSub">
+            <li><a href="sub.html">건축설계</a></li>
+            <li><a href="index.html">도시설계</a></li>
+            <li><a href="index.html">건설사업관리</a></li>
+          </ul>
+        </li>
+        <li><div class="gnaTiT"><label for="menu3">PROJECTS</label></div>
+          <input type="radio" name="menuSub" id="menu3" >
+          <ul class="toSub">
+            <li><a href="index.html">연도별</a></li>
+            <li><a href="index.html">용도별</a></li>
+            <li><a href="index.html">지역별</a></li>
+          </ul>
+        </li>
+        <li><div class="gnaTiT"><label for="menu4">CONTACT</label></div>
+          <input type="radio" name="menuSub" id="menu4" >
+          <ul class="toSub">
+            <li><a href="index.html">오시는 길</a></li>
+            <li><a href="index.html">질문</a></li>
+          </ul>
+        </li>
+        <li><div class="gnaTiT"><label for="menu5">RECRUIT</label></div>
+          <input type="radio" name="menuSub" id="menu5" >
+          <ul class="toSub">
+            <li><a href="index.html">인재상</a></li>
+            <li><a href="index.html">채용 공고</a></li>
+          </ul>
+        </li>
+      </ul> <!-- gnbNAV -->
+      <ul class="log">
+        <li class="login"><a href="#">로그인</a></li>
+        <li class="join"><a href="#">회원가입</a></li>
+      </ul>
+    </div> <!-- toggleMenu -->
+  </div> <!-- gnbMo -->
+</body>
+</html>
