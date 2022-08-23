@@ -299,8 +299,6 @@ body,html{
         opacity: 1;
     }
         .list ul li a img{width: 100%;height: 350px;}
-        /* #black{position: fixed;background: rgba(0,0,0,0.7);top: 0;bottom: 0;left: 0;right: 0;} */
-        /* #big{position: fixed;width: 500px;height: 400px;background: #ddd;top: calc(50% - 200px);left:calc(50% - 250px);padding: 50px;box-sizing:border-box;} */
 
 .blue{
     display: none;
