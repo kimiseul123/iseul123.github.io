@@ -1,11 +1,11 @@
  $(document).ready(function(){
      //스킬 그그래프
-        $(document).ready(function(){
+    
        $('.gr_ps').delay(1000).animate({width: '95%'},2000);
        $('.gr_html').delay(1000).animate({width: '90%'},2000);
        $('.gr_ja').delay(1000).animate({width: '75%'},2000);
             $('.gr_jq').delay(1000).animate({width: '75%'},2000);
-     });
+    
      //포트폴리오
       $('#black,#big').hide();
         //  $(".list a").on('click',function(){
